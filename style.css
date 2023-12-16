@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    background-color: #000;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    margin-left: 30px;
+  }
+  
+  h1 {
+    z-index: 99;
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 200px;
+    top: 200px;;
+  }
+
+  .scroll-down {
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    top: 200px;
+    z-index: 99;
+  }
+
+  p {
+    color: #fff;
+    
+  }
+
+  .info {
+    z-index: 99;
+    position: fixed;
+    top: 40%;
+    right: 20%;
+    font-weight: 100;
+    line-height: 25px;
+  }
+
+  .info  span {
+    font-weight: bolder;
+    margin-right: 5px;
+  }
+
+  .engine,
+  .drive,
+  .overclocking,
+  .power,
+  .interior {
+    width: 30%;
+    right: 10%;
+  }
+
+  .drive {
+    width: 30%;
+    right: 10%;
+  }
+
+  .arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+  }
+  
+  .arrows path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 1px;	
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 {	
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }

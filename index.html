@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <title>Gsap Flip</title>
+  </head>
+  <body>
+    
+    <div class="scroll-down">
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
+    </div>
+    
+    <h1 class="title">Volvo S90</h1>
+
+    <div class="info engine">
+      <p><span>Двигатель:</span> В зависимости от конкретной версии, Volvo S90 может оснащаться различными двигателями, включая бензиновые и дизельные. Например, бензиновый двигатель может быть объемом 2.0 литра.</p>
+    </div>
+    <div class="info drive">
+      <p><span>Привод:</span> Volvo S90 предлагается с передним или полным приводом (AWD).</p>
+    </div>
+    <div class="info overclocking">
+      <p><span>Разгон до 100 км/ч:</span>Зависит от версии и конфигурации, но обычно это занимает около 6-7 секунд.</p>
+    </div>
+    <div class="info power">
+      <p><span>Мощность:</span> Мощность двигателя также различается в зависимости от конкретной модификации. Диапазон мощности может быть от примерно 250 л.с. и выше.</p>
+    </div>
+    <div class="info interior">
+      <p><span>Интерьер и комфорт:</span> Volvo S90 славится своим утонченным интерьером с использованием высококачественных материалов. Он также может предлагать различные технологические функции, такие как системы безопасности, информационно-развлекательные системы и др.</p>
+    </div>
+    <canvas class="canvas" style="left: 0;"></canvas>
+
+
+
+
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+      integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
