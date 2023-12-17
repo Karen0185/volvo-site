@@ -18,6 +18,7 @@
     height: 100vh;
     object-fit: cover;
     margin-left: 30px;
+    left: 0 !important;
   }
   
   h1 {

@@ -99,7 +99,6 @@ gsap.fromTo(
     opacity: 0,
     scrollTrigger: {
       scrub: .1,
-
       start: "0%",
       end: "3%",
     },
@@ -119,7 +118,6 @@ gsap.fromTo(
       opacity: 1,
       scrollTrigger: {
         scrub: .1,
-  
         start: "20%",
         end: "25%",
       },
@@ -139,7 +137,6 @@ gsap.fromTo(
       opacity: 0,
       scrollTrigger: {
         scrub: .1,
-  
         start: "26%",
         end: "30%",
       },
