@@ -159,7 +159,6 @@ gsap.fromTo(
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-        markers: true,
         start: '40% 10%',
         end: '50% 20%'
       },
@@ -180,7 +179,6 @@ gsap.fromTo(
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-        markers: true,
         start: '50% 10%',
         end: '60% 20%'
       },
@@ -199,7 +197,6 @@ gsap.fromTo(
       left: '10%',
       scrollTrigger: {
         scrub: .1,
-        markers: true,
         start: '58% 10%',
         end: '60% 20%'
       },
@@ -220,7 +217,6 @@ gsap.fromTo(
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-        markers: true,
         start: '60% 10%',
         end: '70% 20%'
       },
