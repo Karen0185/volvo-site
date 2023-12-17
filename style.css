@@ -42,7 +42,7 @@
 
   p {
     color: #fff;
-    
+    width: 100%;
   }
 
   .info {
@@ -52,6 +52,7 @@
     right: 20%;
     font-weight: 100;
     line-height: 25px;
+    width: 80%;
   }
 
   .info  span {
@@ -66,11 +67,8 @@
   .interior {
     width: 30%;
     right: 10%;
-  }
-
-  .drive {
-    width: 30%;
-    right: 10%;
+    opacity: 0;
+    margin-bottom: 20px;
   }
 
   .arrows {
@@ -119,4 +117,16 @@
   .arrows path.a3 {	
     animation-delay:0s;
     -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
+
+
+  @media screen and (max-width: 520px) {
+    .engine,
+    .drive,
+    .overclocking,
+    .power,
+    .interior {
+      width: 80%;
+    }
+  
   }

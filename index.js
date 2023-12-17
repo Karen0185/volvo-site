@@ -108,62 +108,22 @@ gsap.fromTo(
   }
 );
 
-
   gsap.fromTo(
     ".engine",
     {
       opacity: 0,
-    },
-    {
-      opacity: 1,
-      scrollTrigger: {
-        scrub: .1,
-        start: "20%",
-        end: "25%",
-      },
-      onComplete: () => {
-        gsap.to(".engine", { opacity: 1 });
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".engine",
-    {
-      top: '40%',
-    },
-    {
-      top: '20%',
-      opacity: 0,
-      scrollTrigger: {
-        scrub: .1,
-        start: "26%",
-        end: "30%",
-      },
-      onComplete: () => {
-        gsap.to(".engine", {opacity: 0});
-      },
-    }
-  );
-
-
-  gsap.fromTo(
-    ".drive",
-    {
-      opacity: 0,
-      top: '50%'
+      top: '40%'
     },
     {
       opacity: 1,
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "26%",
-        end: "30%",
+        start: '20% 10%',
+        end: '30% 20%'
       },
       onComplete: () => {
-        gsap.to(".drive", { opacity: 1 });
+        gsap.to(".engine", { opacity: 0});
       },
     }
   );
@@ -171,19 +131,19 @@ gsap.fromTo(
   gsap.fromTo(
     ".drive",
     {
-      top: '30%'
+      opacity: 0,
+      top: '40%'
     },
     {
-      opacity: 0,
-      top: '25%',
+      opacity: 1,
+      top: '30%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "31%",
-        end: "35%",
+        start: '30% 10%',
+        end: '40% 20%'
       },
       onComplete: () => {
-        gsap.to(".drive", { opacity: 0 });
+        gsap.to(".drive", { opacity: 0});
       },
     }
   );
@@ -192,39 +152,19 @@ gsap.fromTo(
     ".overclocking",
     {
       opacity: 0,
-      top: '50%'
+      top: '40%'
     },
     {
       opacity: 1,
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "31%",
-        end: "35%",
+        markers: true,
+        start: '40% 10%',
+        end: '50% 20%'
       },
       onComplete: () => {
-        gsap.to(".overclocking", { opacity: 1 });
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".overclocking",
-    {
-      top: '30%'
-    },
-    {
-      opacity: 0,
-      top: '25%',
-      scrollTrigger: {
-        scrub: .1,
-  
-        start: "35%",
-        end: "40%",
-      },
-      onComplete: () => {
-        gsap.to(".overclocking", { opacity: 0 });
+        gsap.to(".overclocking", { opacity: 0});
       },
     }
   );
@@ -233,39 +173,19 @@ gsap.fromTo(
     ".power",
     {
       opacity: 0,
-      top: '50%'
+      top: '40%'
     },
     {
       opacity: 1,
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "35%",
-        end: "40%",
+        markers: true,
+        start: '50% 10%',
+        end: '60% 20%'
       },
       onComplete: () => {
-        gsap.to(".power", { opacity: 1 });
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".power",
-    {
-      top: '30%'
-    },
-    {
-      opacity: 0,
-      top: '25%',
-      scrollTrigger: {
-        scrub: .1,
-  
-        start: "50%",
-        end: "55%",
-      },
-      onComplete: () => {
-        gsap.to(".power", { opacity: 0 });
+        gsap.to(".power", { opacity: 0});
       },
     }
   );
@@ -273,19 +193,18 @@ gsap.fromTo(
   gsap.fromTo(
     ".info",
     {
-      right: '10%'
+      right: '10%',
     },
     {
-      right: '0%',
       left: '10%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "45%",
-        end: "50%",
+        markers: true,
+        start: '58% 10%',
+        end: '60% 20%'
       },
       onComplete: () => {
-        gsap.to(".info");
+        gsap.to(".info", { opacity: 0});
       },
     }
   );
@@ -294,43 +213,26 @@ gsap.fromTo(
     ".interior",
     {
       opacity: 0,
-      top: '50%'
+      top: '40%'
     },
     {
       opacity: 1,
       top: '30%',
       scrollTrigger: {
         scrub: .1,
-  
-        start: "50%",
-        end: "55%",
+        markers: true,
+        start: '60% 10%',
+        end: '70% 20%'
       },
       onComplete: () => {
-        gsap.to(".interior", { opacity: 1 });
+        gsap.to(".interior", { opacity: 0});
       },
     }
   );
 
-  gsap.fromTo(
-    ".interior",
-    {
-      top: '30%'
-    },
-    {
-      opacity: 0,
-      top: '25%',
-      scrollTrigger: {
-        scrub: .1,
   
-        start: "65%",
-        end: "70%",
-      },
-      onComplete: () => {
-        gsap.to(".interior", { opacity: 0 });
-      },
-    }
-  );
 
+  
 
   
 images[0].onload = render;
