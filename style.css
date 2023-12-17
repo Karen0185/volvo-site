@@ -12,6 +12,28 @@
     font-family: "Lato", sans-serif;
     overflow-x: hidden;
   }
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 101;
+    background-color: #000;
+  }
+
+  .loading {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    z-index: 103;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loading iframe {
+    border: none
+  }
   
   .canvas {
     width: 100vw;

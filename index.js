@@ -14,7 +14,7 @@ let volvo = { frame: 0 };
 for (let i = 0; i < frameCount; i++) {
   const img = new Image();
   img.src = currentFrame(i);
-  console.log(currentFrame(i));
+  // console.log(currentFrame(i));
   images.push(img);
 }
 
@@ -108,129 +108,124 @@ gsap.fromTo(
   }
 );
 
-  gsap.fromTo(
-    ".engine",
-    {
-      opacity: 0,
-      top: '40%'
+gsap.fromTo(
+  ".engine",
+  {
+    opacity: 0,
+    top: '40%'
+  },
+  {
+    opacity: 1,
+    top: '30%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '20% 10%',
+      end: '30% 20%'
     },
-    {
-      opacity: 1,
-      top: '30%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '20% 10%',
-        end: '30% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".engine", { opacity: 0});
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".drive",
-    {
-      opacity: 0,
-      top: '40%'
+    onComplete: () => {
+      gsap.to(".engine", { opacity: 0 });
     },
-    {
-      opacity: 1,
-      top: '30%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '30% 10%',
-        end: '40% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".drive", { opacity: 0});
-      },
-    }
-  );
+  }
+);
 
-  gsap.fromTo(
-    ".overclocking",
-    {
-      opacity: 0,
-      top: '40%'
+gsap.fromTo(
+  ".drive",
+  {
+    opacity: 0,
+    top: '40%'
+  },
+  {
+    opacity: 1,
+    top: '30%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '30% 10%',
+      end: '40% 20%'
     },
-    {
-      opacity: 1,
-      top: '30%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '40% 10%',
-        end: '50% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".overclocking", { opacity: 0});
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".power",
-    {
-      opacity: 0,
-      top: '40%'
+    onComplete: () => {
+      gsap.to(".drive", { opacity: 0 });
     },
-    {
-      opacity: 1,
-      top: '30%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '50% 10%',
-        end: '60% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".power", { opacity: 0});
-      },
-    }
-  );
+  }
+);
 
-  gsap.fromTo(
-    ".info",
-    {
-      right: '10%',
+gsap.fromTo(
+  ".overclocking",
+  {
+    opacity: 0,
+    top: '40%'
+  },
+  {
+    opacity: 1,
+    top: '30%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '40% 10%',
+      end: '50% 20%'
     },
-    {
-      left: '10%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '58% 10%',
-        end: '60% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".info", { opacity: 0});
-      },
-    }
-  );
-
-  gsap.fromTo(
-    ".interior",
-    {
-      opacity: 0,
-      top: '40%'
+    onComplete: () => {
+      gsap.to(".overclocking", { opacity: 0 });
     },
-    {
-      opacity: 1,
-      top: '30%',
-      scrollTrigger: {
-        scrub: .1,
-        start: '60% 10%',
-        end: '70% 20%'
-      },
-      onComplete: () => {
-        gsap.to(".interior", { opacity: 0});
-      },
-    }
-  );
+  }
+);
 
-  
+gsap.fromTo(
+  ".power",
+  {
+    opacity: 0,
+    top: '40%'
+  },
+  {
+    opacity: 1,
+    top: '30%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '50% 10%',
+      end: '60% 20%'
+    },
+    onComplete: () => {
+      gsap.to(".power", { opacity: 0 });
+    },
+  }
+);
 
-  
+gsap.fromTo(
+  ".info",
+  {
+    right: '10%',
+  },
+  {
+    left: '10%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '58% 10%',
+      end: '60% 20%'
+    },
+    onComplete: () => {
+      gsap.to(".info", { opacity: 0 });
+    },
+  }
+);
 
-  
+gsap.fromTo(
+  ".interior",
+  {
+    opacity: 0,
+    top: '40%'
+  },
+  {
+    opacity: 1,
+    top: '30%',
+    scrollTrigger: {
+      scrub: .1,
+      start: '60% 10%',
+      end: '70% 20%'
+    },
+    onComplete: () => {
+      gsap.to(".interior", { opacity: 0 });
+    },
+  }
+);
+
 images[0].onload = render;
 
 function render() {
@@ -239,4 +234,9 @@ function render() {
 
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(images[volvo.frame], 0, 0);
+}
+
+if (images.length > 300) {
+  document.querySelector('.loading').style.display = 'none'
+  document.querySelector('.bg').style.display = 'none'
 }
